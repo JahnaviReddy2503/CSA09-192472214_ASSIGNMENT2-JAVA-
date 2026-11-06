@@ -17,7 +17,7 @@ public class Main {
       for(int r=1;r<=10;r++){long before=used(),t=System.nanoTime();String s=build(m,e.getValue());long n=System.nanoTime()-t,after=used();
         System.out.printf("%s,%s,%d,%d,%d,%d,%d%n",e.getKey(),m,r,n,m.equals("StringPlus")?e.getValue():1,after-before,checksum(s));}}
     System.out.println("Average measured ns by workload/method:");
-    for(var e:cases.entrySet())for(String m:METHODS){long sum=0;for(int i=0;i<10;i++){long t=System.nanoTime();sum+=System.nanoTime()-t;build(m,e.getValue());}System.out.println(e.getKey()+" "+m+" average_ns="+sum/10);}
+    for(var e:cases.entrySet())for(String m:METHODS){long sum=0;for(int i=0;i<10;i++){long t=System.nanoTime();build(m,e.getValue());sum+=System.nanoTime()-t;}System.out.println(e.getKey()+" "+m+" average_ns="+sum/10);}
     System.out.println("Other APIs: "+String.join("|","A","B","C")+" / "+new StringJoiner("|").add("A").add("B").add("C")+" / "+String.format("%s|%s|%s","A","B","C"));
     StringBuffer shared=new StringBuffer(); ExecutorService pool=Executors.newFixedThreadPool(4); for(int i=0;i<4;i++){final int k=i;pool.submit(()->{for(int j=0;j<1000;j++)shared.append(k).append(',');});}pool.shutdown();pool.awaitTermination(1,TimeUnit.MINUTES);
     System.out.println("Shared StringBuffer length="+shared.length()+" expected_at_least=8000");
