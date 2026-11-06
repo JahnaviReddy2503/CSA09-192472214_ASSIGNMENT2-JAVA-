@@ -1,0 +1,5 @@
+test,metric,value
+Expected ranking,[Eagles(9,6), Bisons(9,4), Panthers(9,4), Cobras(6,1)]
+Original unchanged,[Panthers(9,4), Cobras(6,1), Bisons(9,4), Eagles(9,6)]
+Faulty overflow comparator sign=-1
+Missing tie-breaker compare=0
