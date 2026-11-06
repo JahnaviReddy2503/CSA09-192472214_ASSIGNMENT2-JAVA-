@@ -1,0 +1,6 @@
+test,metric,value
+Before hashCode,Unique students,3
+After hashCode,Unique students,2
+T1 distinct=2
+T2 duplicates=2
+T3 contains=true remove=true
