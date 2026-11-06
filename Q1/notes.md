@@ -19,3 +19,6 @@ Use `StringBuilder` for each ticket and `StringBuffer` (or a better concurrent l
 
 ## Observed results
 Observed averages from the final run (ns): short_ticket StringPlus average_ns=1260; short_ticket StringBuilder average_ns=1330; short_ticket StringBuffer average_ns=1940. See results.csv for all 90 raw rows.
+
+## Final observed rerun
+Final full-workload averages from output.txt: long_ticket_500_fields StringPlus=213310 ns, StringBuilder=13950 ns, StringBuffer=16340 ns; short_ticket StringPlus=130 ns, StringBuilder=140 ns, StringBuffer=230 ns; bulk_10000x50 StringPlus=36982370 ns, StringBuilder=11427120 ns, StringBuffer=15899130 ns.
