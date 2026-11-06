@@ -3,7 +3,7 @@
 Repeated `String` `+` should copy accumulated characters and approach O(n^2); `StringBuilder` and `StringBuffer` should be O(n). I expect synchronization to make `StringBuffer` slower. The short case may hide the difference.
 
 ## Design and observed results
-`Main.java` runs warm-ups and 10 timed runs for three workloads (the bulk case uses 10,000 generated fields to keep the required repeated-concatenation experiment runnable on this machine), writes the raw rows to `output.txt`, and the same CSV-shaped data is extracted to `results.csv`. It also exercises `join`, `StringJoiner`, `format`, and a shared `StringBuffer` log.
+`Main.java` runs warm-ups and 10 timed runs for three workloads, including 10,000 tickets with 50 fields each, writes the raw rows to `output.txt`, and the same CSV-shaped data is extracted to `results.csv`. It also exercises `join`, `StringJoiner`, `format`, and a shared `StringBuffer` log.
 
 ## Prediction vs observation
 The measured averages in `output.txt` and `results.csv` are the evidence; this section is completed from those generated values.
