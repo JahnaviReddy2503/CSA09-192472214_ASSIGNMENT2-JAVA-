@@ -7,7 +7,7 @@ public class Main {
     List<Integer> l=type.equals("ArrayList")?new ArrayList<>():new LinkedList<>(); for(int i=0;i<n;i++)l.add(i);
     for(String op:new String[]{"add_end","insert_front","insert_middle","remove_front","remove_middle","get_kth","iterate"}){
       for(int i=0;i<2;i++) { final String o=op; time(()->run(l,o));}
-      long s=0;for(int r=1;r<=10;r++){long x=time(()->run(l,o));s+=x;row(type,o,n,x);}System.out.println("average,"+type+" "+op+" "+n+","+(s/10));}
+      long s=0;for(int r=1;r<=10;r++){long x=time(()->run(l,op));s+=x;row(type,op,n,x);}System.out.println("average,"+type+" "+op+" "+n+","+(s/10));}
    } }
   System.out.println("Up Next queue:");ArrayDeque<Integer> q=new ArrayDeque<>();long t=System.nanoTime();for(int i=0;i<100000;i++){q.addLast(i);if(i%2==0)q.addFirst(-i);q.pollFirst();}System.out.println("arraydeque_ns="+(System.nanoTime()-t)+" remaining="+q.size());
   System.out.println("Alternative plain array uses shifting O(n) front/middle operations.");
