@@ -16,3 +16,6 @@ Repeated plus is O(n^2) character copying in a loop; builders are amortized O(n)
 
 ## Decision/recommendation
 Use `StringBuilder` for each ticket and `StringBuffer` (or a better concurrent logging design) for a shared booking log. Choose from actual benchmark rows rather than assuming a constant factor.
+
+## Observed results
+Observed averages from the final run (ns): short_ticket StringPlus average_ns=1260; short_ticket StringBuilder average_ns=1330; short_ticket StringBuffer average_ns=1940. See results.csv for all 90 raw rows.

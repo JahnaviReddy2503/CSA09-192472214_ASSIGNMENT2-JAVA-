@@ -10,3 +10,6 @@ Heap space is O(n). A sorted LinkedList has O(n) insertion; five FIFO queues off
 
 ## Prediction vs observation / decision
 Compare generated timings to the predicted growth. Deploy a priority queue with periodic aging/reprioritization: it preserves urgency while preventing starvation, at the cost of more policy work.
+
+## Observed results
+The executed 8-patient drain was Meena, Kumar, Lata, Omar, Ravi, John, Ira, Asha; 30 raw timing rows and the 5,000/day simulation are in the generated files.

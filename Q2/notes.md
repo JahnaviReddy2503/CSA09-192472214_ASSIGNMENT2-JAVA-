@@ -13,3 +13,6 @@ ArrayList stores O(n) contiguous references; LinkedList stores O(n) nodes with l
 
 ## Decision
 Use ArrayList for indexed/read-heavy playlists, ArrayDeque for Up Next, and stop recommending LinkedList unless operations are truly node-local or a deque API is insufficient.
+
+## Observed results
+Sample computed averages from results.csv: ArrayList/add_end/1000 average_ns=900; ArrayList/insert_front/1000 average_ns=1210; ArrayList/insert_middle/1000 average_ns=1070; ArrayList/remove_front/1000 average_ns=1180; ArrayList/remove_middle/1000 average_ns=1190; ArrayList/get_kth/1000 average_ns=2200. The complete 630-row raw dataset is retained.

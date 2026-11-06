@@ -13,3 +13,6 @@ The redesign should be faster, especially at larger sizes, with a larger improve
 
 ## E/F. Validation and defence
 `Main.java` contains both methods and records identical-condition runs in `results.csv`; `output.txt` has the raw observations. If measurements support the prediction, use the builder for local construction. Original concatenation remains acceptable for tiny, infrequent expressions and where immutability is clearer.
+
+## Observed results
+The executed output contains 60 paired timing rows for original and redesign across 1,000, 10,000, and 100,000 items. The raw rows are in results.csv.

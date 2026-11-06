@@ -3,7 +3,7 @@
 Name: ____________________  
 Register number: ____________________
 
-Java version used: see the generated `java -version` line below.
+Java version used: OpenJDK 17.0.21.0.2 LTS (Microsoft build, observed with `java -version`).
 
 ## Run
 From the repository root, for each question:

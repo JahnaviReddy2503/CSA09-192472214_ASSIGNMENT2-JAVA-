@@ -10,3 +10,6 @@ Sorting is O(n log n) time and O(n) copy space (plus sort workspace). Comparable
 
 ## Prediction vs observation / decision
 The printed ranking and original list verify non-mutation. Use the comparator chain; never subtract potentially extreme integers.
+
+## Observed results
+The executed output recorded the required ranking exactly: [Eagles(9,6), Bisons(9,4), Panthers(9,4), Cobras(6,1)], with the original order unchanged.

@@ -10,3 +10,6 @@ Define acceptable lookup time as the smallest stable measured average that meets
 
 ## Complexity and space
 HashMap/LinkedHashMap put/get average O(1), TreeMap O(log n); iteration is O(n), sorting an unordered report O(n log n). All use O(n) space, with tree/node overhead varying.
+
+## Observed results
+The first three measured rows were: 1000,HashMap,1,243867700,2274000,240800,true; 1000,HashMap,2,171316600,953900,52500,true; 1000,HashMap,3,155751400,511000,133900,true. Complete averages can be recomputed from the 90 raw rows.
